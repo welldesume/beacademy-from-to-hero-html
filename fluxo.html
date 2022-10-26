@@ -1,0 +1,161 @@
+<!--
+  O  Browser determina qual regar aplicar e commo aplicar, caso ha diversas regras para o mesmo elemento
+
+  * O fluxo de leitura da sua folha de estilo é de cima para baixo
+
+  ****IMPORTANTE CONSIDERAR****
+
+  1. Origem da folha de estilo
+  2. Especificidade
+  3. Impportancia
+
+  **TIPOS DE ESTILOS**
+
+  inline > tag style > tag link
+  
+  *Especificidade
+
+  Cáuculo matemático desenvolvido automaticamente pela regra css, onde cada tipo de seletor e origem do estilo possuem valores considerados
+
+  0. Universal seletor, combinator e pseudo-class(:not())
+  1. Elementos do tipo seletor e pseudo-elementos(:: before, ::after)
+  10. Classes e atributos de seletores ([type="radio"])
+  100. Seletor ID
+  1000. Inline
+
+
+  --------------------------------------
+
+  #At-rules
+    São regras relacionadas ao comportamento do CSS, começa com um sinal de @ seguido do identicador e dovalor
+
+    São as seguintes:
+    @import serve para incluir um CSS externo.
+
+    @import url("http://linkexterno.com.br/style.css")
+
+    @media são regras condicionais para vários dispositivos.
+
+    @media (min-width: 365px) {
+
+    }
+
+    @font-face {
+
+    }
+
+    @keyframes serve para as animations do CSS.
+
+    @keyframes animationname {
+
+    }
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- <style>
+    h1 {
+       background: blue;
+    }
+
+    #super-title{
+      background: red;
+    }
+    
+    h1 {
+      background: green;
+    }
+
+    .my-title-2{
+      background:yellow ;
+    }
+
+    strong {
+      color: blueviolet;
+    }
+
+    .my-text strong {
+      color: aqua;
+    }
+  </style>  -->
+<!--assunto acima pertence a aula de fluxo de leitura e especifidade-->
+
+
+
+<style>
+  /* body ul {
+    background: green;
+    color: red;
+  }
+  obs: aplica a todos
+ body section ul li {
+  background: blue;
+  color: yellow;
+ } 
+ obs: aplica especificamente
+  */
+  /* body > ul{
+    background-color: brown;
+  }
+  div > ul {
+    background-color: blue;
+  } */
+
+h1 + p {
+  color: green;
+}
+/* todos h1 agrora */
+h1 ~ p {
+  color: green;
+}
+
+</style>
+</head>
+
+ <body>
+
+  
+    <!-- <h1 id="super-title" style="color: aqua">Testando Especificidades</h1>
+    <p class="my-text">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> <strong>Ducimus consequuntur</strong> veritatis vel ea doloribus odit eligendi <br>incidunt velit, dolorem libero aperiam possimus nesciunt assumenda ratione<br> iusto doloremque consectetur iure aut!
+    </p>
+
+    <h1
+     class="my-title-2">Testando Especificidades
+    </h1>
+    <p class="my-tutle-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, hic. Obcaecati, recusandae.<br> Consectetur, libero voluptatem voluptates accusamus saepe quas laboriosam non, <br>laborum odit atque, iusto sapiente.<strong>Officia</strong>  ipsa voluptatum dicta?</p> -->
+<!--assunto acima pertence a aula de fluxo de leitura e especifidade-->
+  
+<!-- <div>
+  <p>Teste</p>
+</div>
+<ul>
+  <li>Testando combinadores</li>
+</ul>
+<div>Outro formato</div>
+<section>
+  <div>
+    <ul>
+      <li>Outro marcador</li>
+    </ul>
+  </div>
+</section> -->
+
+  <h1>Título </h1>
+  <p>Mais um paragrafo</p>
+  <button>Enviar</button>
+  <p>Outro paragrafo</p>
+  <p>Outro paragrafo</p>
+  <p>Outro paragrafo</p>
+  <p>Outro paragrafo</p>
+
+
+</body>
+
+</html>

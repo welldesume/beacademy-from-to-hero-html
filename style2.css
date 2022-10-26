@@ -1,0 +1,34 @@
+ul {
+  position: relative;
+}
+
+ul li::after{
+  /* content: 'Onde eu estou';
+  color: red;
+  font-size: 24px; */
+
+  content: '';
+  background-color: red;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 140px;
+}
+
+ul li::before{
+  /* content: 'Onde eu estou';
+  color: red;
+  font-size: 24px; */
+
+  content: '';
+  background-color: blue;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+}
+p::first-line {
+  color: red;
+}

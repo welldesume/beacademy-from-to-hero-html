@@ -1,0 +1,67 @@
+.container{
+  width: 25rem;
+  height: auto;
+  padding: 1rem;
+  background-color: blue;
+  margin-bottom: 0.5rem;
+}
+
+.text-box h2{
+  color: white;
+  font-size: 1.5rem;
+}
+.text-box p{
+  color: wheat;
+}
+
+
+/*primeiro Breakpoint 575px*/
+
+@media (min-width: 575px){
+  .container{
+    background: red;
+    margin-bottom: 1rem;
+  }
+}
+/*segundo Breackpint 768*/
+@media (min-width: 768px){
+  .container{
+    width:40.6rem;
+    background: green;
+    margin-bottom: 1.12rem;
+  }
+  .text-box h2,
+  .textbox p{
+    color: aqua;
+  }
+
+}
+/*terceiro Breackpoint 992*/
+
+@media(min-width:992px){
+  body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    background: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .container{
+    width: 43.7rem;
+    padding: 1.25rem;
+    background-color: black;
+    display: flex;
+    margin-right: 0.5rem;
+    justify-content: center;
+  }
+  .tex-box h2 {
+    color: green;
+    font-size: 3rem;
+  }
+  .text-box p{
+    color: white;
+    font-size: 1.5rem;
+  }
+}

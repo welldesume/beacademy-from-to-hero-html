@@ -1,0 +1,101 @@
+<!--
+
+  TRabalhando com cores
+
+  *** Onde posso mudar cores no CSS? ***
+
+  - background-color (Para caixas)
+  - color (Para textos)
+  - boder-color (Para bordas de caixas)
+  - entre outros
+
+  * Quais são os valores para atribuir 
+
+  - palabvras (blue, red, white, transparent)
+  - valores em hexadecimal(#fff321)
+  - funções: rgb, hsl, rgba, hsla
+
+  Anatomia:
+
+  Hexadecimal
+
+  #ff0000 (2 primeiros digitos RED)
+  #00FF00 (Próximos 2 digtos GREEN)
+  #0000FF (2 últimos digitos BLUE) 0-9 e A-F
+
+  RGB
+
+  rgb(255,0,0) - RED
+  rgb(0,255,00) - GREEN
+  rgb(0,0,255)- BLUE
+
+  RGBA
+
+  rgba(255,0,0,0.3) - RED Opacity (Opacidade)
+  rgba(0,255,0,0.3) - GREEN Opacity (Opacidade)
+  rgba(0,0,255,0.3) - BLUE Opacity (Opacidade)
+
+  HSL
+
+  hsl (hue, saturation, lightness)
+  hue -> Define um grau de cores (de 0 a 360) - 0 ou 360 évermelho, 120 é verde, 240 é azul
+  saturation ->Define a saturaçã; 0% é um tom de cinza e 100% é a cor total (saturação total)
+  lightness -> Define a leveza; 0% é preto, 50% é normal e 100% é branco
+
+  hsl(360,100%,50%) - Vermelho normal
+  hsl(360,100%,75%) - Vermelho claro
+  hsl(360,100%,25%) - Vermelho escuro
+  hsl(360,40%,70%) -  Vermelho pastel
+  
+  
+  hsla (hue, saturation, ligtness, alpha)
+  alpha -> Define a opacidade como um número entre 0,0 (totalmente transparente)e 1,0 (totalmente opaco)
+
+  hsla(360,100%,50%,0.3) - Vermelho normal com opacidade
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backgroud and Color</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: 0;
+    }
+
+    .bg-box{
+      width: 600px;
+      height: 600px;
+      border: 8px #000 dotted;
+      /*shorthand*/
+      background: #ff12ff;
+      padding: 16px;
+
+      /*imagem de fundo*/
+      background-image:url("https://source.unsplash.com/random");
+      background-size: 20%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-origin:content-box;
+      background: linear-gradient(rgba(0,90,0,1), rgba(0,90,0,0.5));
+      /*background-attachment: fixed;*/
+
+      /*SUPER COMBO - Shorthand*/
+
+      background: radial-gradient(rgba(0,90,0,1), rgba(0,90,0,0.1)), url("https://source.unsplash.com/random") no-repeat center center /50% content-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bg-box"></div>
+    <h1>Testando background</h1>
+  </div>
+</body>
+</html>

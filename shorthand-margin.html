@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shorthand and Margins</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font: italic 100 32px 'arial', sans-serif;
+      }
+
+      .box {
+        background: red;
+        /*margin shorthand*/
+        /* top/bottom(cima,baixo) right/left (direita,esquerda)*/
+        /*margin: 24px 8px;*/
+
+        /*margin:  12px 80px 4px;
+       top right/left botton*/
+
+        margin: 8px 4px 12px 42px;
+        /*top right left botton*/
+        /* obs: sistema horario cima, direita,baixo,esquerda*/
+      }
+
+      .box-2 {
+        background: green;
+      }
+      .box-3 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+  Recuso usado para agrupar propriedades, sendo assim sua escrita ficará mais curta
+-->
+    <div class="box">
+      <h1>Título 1</h1>
+    </div>
+
+    <div class="box-2">
+      <h1>Título 2</h1>
+    </div>
+
+    <div class="box-3">
+      <h1>Título 3</h1>
+    </div>
+  </body>
+</html>
